@@ -46,7 +46,7 @@ public class WeatherStation {
 		//setChanged()를 호출한다. 해당 메소드는 observable 클래스의 매개변수인 changed를 true로 변경시켜준다. (기본값 false)
 		//weatherData에서 notifyObserver()를 호출한다. 호출한 메소드는 옵저버들에게 해당 내용을전달해주기 위한 메소드이다.
 		//notifyObserver()는 changed가 true일때만 작동한다.
-		//notifyObserver()는 이제 Vector로 등록되어있는 모든 Observer들을 배열로바꾸어서 반복문을 이용해 Observer의 update()메소드를 계속 실행시킨다.
+		//notifyObserver()는 이제 Vector로 등록되어있는 모든 Observer들을 배열로바꾸어서 반복문을 이용해 Observer의 update()메소드를 각각 실행시킨다.
 		//즉, Observer인 CurrentConditionDisplay는 update()메소드를 실행하게 된다.
 		//이 업데이트 메소드는 자기자신의 멤버변수들인 온도와 습도를 업데이트하며, 업데이트가 될때마다 Display되게 한다!
 				

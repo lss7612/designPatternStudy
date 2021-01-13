@@ -29,7 +29,6 @@ public class CurrentConditionDisplay implements Observer, DisplayElement{
 			this.humidity = weatherData.getHumidity();
 			display();
 		}
-		
 	}
 
 }
