@@ -1,16 +1,16 @@
 package ex04_factoryPattern;
 
 public class PizzaStore {
+
+	SimplePizzaFactory factory;
 	
-	public PizzaStore() {
-		// TODO Auto-generated constructor stub
+	public PizzaStore(SimplePizzaFactory factory) {
+		this.factory = factory;
 	}
 	
 	public Pizza orderPizza(String type) {
-		Pizza pizza;
-		
-		pizza = factory.createPizza(type);
-		
+		Pizza pizza = factory.createPizza(type);
+
 		pizza.prepare();
 		pizza.bake();
 		pizza.cut();
