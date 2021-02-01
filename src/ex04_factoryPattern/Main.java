@@ -1,9 +1,17 @@
 package ex04_factoryPattern;
 
+import ex04_factoryPattern.pizzaStore.ChicagoPizzaStore;
+import ex04_factoryPattern.pizzaStore.NYPizzaStore;
+import ex04_factoryPattern.pizzaStore.PizzaStore;
+
 public class Main {
 	public static void main(String[] args) {
-		PizzaStore pizzaStore = new PizzaStore(new SimplePizzaFactory());
+	
+		PizzaStore nyPizzaStore = new NYPizzaStore();
+		nyPizzaStore.orderPizza("cheese");
 		
-		pizzaStore.orderPizza("cheese");
+		PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+		chicagoPizzaStore.orderPizza("cheese");
+		
 	}
 }

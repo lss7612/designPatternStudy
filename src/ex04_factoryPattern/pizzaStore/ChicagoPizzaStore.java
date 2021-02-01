@@ -1,29 +1,26 @@
-package ex04_factoryPattern;
+package ex04_factoryPattern.pizzaStore;
 
 import ex04_factoryPattern.pizza.ChicagoCheesePizza;
 import ex04_factoryPattern.pizza.ChicagoClamPizza;
 import ex04_factoryPattern.pizza.ChicagoPepperoniPizza;
-import ex04_factoryPattern.pizza.Pizza;
 import ex04_factoryPattern.pizza.ChicagoVeggiePizza;
+import ex04_factoryPattern.pizza.Pizza;
 
-public class SimplePizzaFactory {
+public class ChicagoPizzaStore extends PizzaStore{
 
-	public Pizza createPizza(String type) {
-		
-		Pizza pizza = null;
+	@Override
+	Pizza createPizza(String type) {
 		
 		if(type.equals("cheese")) {
-			pizza = new ChicagoCheesePizza();
+			return new ChicagoCheesePizza();
 		} else if(type.equals("pepperoni")) {
-			pizza = new ChicagoPepperoniPizza();
+			return new ChicagoPepperoniPizza();
 		} else if(type.equals("veggie")) {
-			pizza = new ChicagoVeggiePizza();
+			return new ChicagoVeggiePizza();
 		} else if(type.equals("clam")) {
-			pizza = new ChicagoClamPizza();
-		}
-		
-		
-		return pizza;
+			return new ChicagoClamPizza();
+		} else return null;
 	}
-	
+
 }
+ 
