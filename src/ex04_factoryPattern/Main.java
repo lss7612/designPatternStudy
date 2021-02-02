@@ -1,8 +1,8 @@
 package ex04_factoryPattern;
 
-import ex04_factoryPattern.pizzaStore.ChicagoPizzaStore;
-import ex04_factoryPattern.pizzaStore.NYPizzaStore;
-import ex04_factoryPattern.pizzaStore.PizzaStore;
+import ex04_factoryPattern.pizzaStore.face.PizzaStore;
+import ex04_factoryPattern.pizzaStore.impl.ChicagoPizzaStore;
+import ex04_factoryPattern.pizzaStore.impl.NYPizzaStore;
 
 public class Main {
 	public static void main(String[] args) {
