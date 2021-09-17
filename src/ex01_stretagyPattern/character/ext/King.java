@@ -9,7 +9,7 @@ public class King extends Charactor {
 	
 	@Override
 	public void fight() {	
-		System.out.println("왕이 으로 싸운다.");
+		weapon.useWeapon();
 	}
 
 }

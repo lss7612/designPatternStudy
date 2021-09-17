@@ -5,6 +5,7 @@ import java.util.Observer;
 
 import ex02_observerPattern.face.DisplayElement;
 
+@SuppressWarnings("deprecation")
 public class CurrentConditionDisplay implements Observer, DisplayElement{
 
 	private Observable observable;
@@ -18,7 +19,7 @@ public class CurrentConditionDisplay implements Observer, DisplayElement{
 	
 	@Override
 	public void display() {
-		System.out.println("Current Condition : "+temperature+"F degrees and " + humidity + "% humidity");
+		System.out.println("Current Condition : " + temperature + "F degrees and " + humidity + "% humidity");
 	}
 
 	@Override
